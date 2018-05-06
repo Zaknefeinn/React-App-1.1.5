@@ -1,0 +1,16 @@
+.fb-logo {
+  height:40px;
+}
+
+.feed {
+  width: 500px;
+  height: 800px;
+  overflow: auto;
+  background-color: #f6f7f9;
+  text-align: left;
+}
+
+.fb-feed-image {
+  width: 475px;
+  margin-left: 10px;
+}

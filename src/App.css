@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+}
+
+
+.header {
+  background-color: #007dc6;
+  height: 50px;
+  padding: 20px;
+  color: white;
+  border-bottom: solid 5px #ffc220;
+}
+
+.logo {
+  height: 50px;
+}
+
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.footer {
+  height: 100px;
+  background-color: #007dc6;
+  border-top: solid 5px #ffc220;
+
+}
+
+.social-header {
+  height:50px;
+  width: 550px;
+  background-color: #ffc220;
+}
+.social-feed {
+  width: 550px;
+  height:755px;
+  background-color: #e1e1e1;
+}
