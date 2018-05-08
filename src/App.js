@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import Header from './components/header';
-import Facebook from './components/facebook/facebook';
+import FbList from './components/feeds/fbList'
+import TwitterList from './components/feeds/twitterList'
 import Footer from './components/footer';
-import TwitterTimeline from 'react-twitter-embedded-timeline';
+import NewsFeed from './components/newsFeed'
+import keys from './components/keys';
+
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 import './App.css';
 
@@ -10,16 +14,22 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <Facebook />
-        <TwitterTimeline widgetId="695868534455275520" chrome="noborders noheader" height={300} />
-
-
-
-
+          <Header />
+          <Row >
+            <Col xs={4} className="feed-col">
+              <FbList groupId={keys.groupId} />
+            </Col>
+            <Col xs={4} className="feed-col"  >
+              <TwitterList/>
+            </Col>
+            <Col xs={4} className="feed-col">
+              <FbList groupId={keys.evntGroupId} />
+            </Col>
+          </Row>
         <div className="bottom">
           <Footer />
         </div>
+        <NewsFeed/>
       </div>
     );
   }
