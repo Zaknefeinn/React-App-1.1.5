@@ -4,8 +4,9 @@ import WorkplaceFeeds from './components/feeds/workplaceFeeds'
 import FacebookFeeds from './components/feeds/facebookFeeds'
 import TwitterFeeds from './components/feeds/twitterFeeds'
 import Footer from './components/footer';
+import NewsFeed from './components/newsFeed'
 
-import { Row, Col } from 'react-flexbox-grid';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 import './App.css';
 
@@ -26,6 +27,7 @@ class App extends Component {
             </Col>
           </Row>
           <Footer/>
+          <NewsFeed/>
       </div>
     );
   }

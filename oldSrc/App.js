@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Header from './components/header';
-import WorkplaceFeeds from './components/feeds/workplaceFeeds'
-import FacebookFeeds from './components/feeds/facebookFeeds'
-import TwitterFeeds from './components/feeds/twitterFeeds'
+import FbList from './components/feeds/fbList'
+import TwitterList from './components/feeds/twitterList'
 import Footer from './components/footer';
+import NewsFeed from './components/newsFeed'
+import keys from './components/keys';
 
-import { Row, Col } from 'react-flexbox-grid';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 import './App.css';
 
@@ -16,16 +17,19 @@ class App extends Component {
           <Header />
           <Row >
             <Col xs={4} className="feed-col">
-              <FacebookFeeds/>
+              <FbList groupId={keys.groupId} />
             </Col>
             <Col xs={4} className="feed-col"  >
-              <TwitterFeeds/>
+              <TwitterList/>
             </Col>
             <Col xs={4} className="feed-col">
-              <WorkplaceFeeds/>
+              <FbList groupId={keys.evntGroupId} />
             </Col>
           </Row>
-          <Footer/>
+        <div className="bottom">
+          <Footer />
+        </div>
+        <NewsFeed/>
       </div>
     );
   }
